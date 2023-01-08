@@ -17,12 +17,7 @@ let bookings = [];
 let date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
 let time_regex = /^(0[0-9]|1\d|2[0-3])\:(00)/;
 
-app.get("/", function (request, response) {
-  response.status(200).send({
-    output: "Homepage",
-  });
-});
-
+// Get All Rooms
 app.get("/getAllRooms", function (request, response) {
   if (rooms.length) {
     response.status(200).send({
